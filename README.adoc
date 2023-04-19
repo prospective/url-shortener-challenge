@@ -1,0 +1,49 @@
+= URL Shortener
+Code Challenge
+
+ifdef::env-github[]
+:imagesdir:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:toc:
+:toc-placement!:
+
+NOTE: We're using these keywords as described in link:https://datatracker.ietf.org/doc/html/rfc2119[RFC2119] for `MUST`, `SHOULD` and `MAY`.
+
+image::https://cdn-icons-png.flaticon.com/128/7304/7304848.png[Link,128,128,align="center"]
+
+toc::[]
+
+Please develop an application which fullfills the requirements described below. Push your code to your github profile (*PRIVATE Repository*) and invite following users to the repo.
+
+* link:https://github.com/borisstock[borisstock]
+* link:https://github.com/ehinterberger[ehinterberger]
+* link:https://github.com/peterstaub81[peterstaub81]
+* link:https://github.com/StarHack[StarHack]
+* link:https://github.com/minderjan[minderjan]
+
+
+== Functional Requirements
+
+* [ ] An application which exposes one endpoint (MUST be a REST endpoint) to shorten a url. The backend responds with a shortened url.
+* [ ] If the shortened URL will be called, the application performs a redirect to the registered URL.
+* [ ] The registered URL SHOULD be persisted to survive application restarts.
+
+== Non-Functional Requirements
+
+* [ ] MUST use Spring Boot
+* [ ] MUST use a build tool. _Use a tool, you're familiar with._
+* [ ] Required services MUST be containerized. MAY be a docker container.
+* [ ] The application itself MUST be containerized. MAY be a docker container.
+* [ ] The project MAY be able to start (not built) with only one command.
+* [ ] The business layer MUST contain minimum ONE meaningful test (the covereage is not essential)
+* [ ] Postgres MAY be used as persistent storage layer.
+
+== Bonus
+
+* [ ] A client MAY provide a TTL Information for a new URL shorten request.
+* [ ] If the TTL for a given URL is reached, the URL will be removed from the persistent storage.
