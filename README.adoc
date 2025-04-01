@@ -1,4 +1,4 @@
-= URL Shortener
+= URL Shortener - Code Challenge
 Code Challenge
 
 ifdef::env-github[]
@@ -18,14 +18,12 @@ image::https://cdn-icons-png.flaticon.com/128/7304/7304848.png[Link,128,128,alig
 
 toc::[]
 
-Please develop an application which fullfills the requirements described below. Push your code to your github profile (*PRIVATE Repository*) and invite following users to the repo.
+Please develop an application which fulfills the requirements described below. Push your code to your github profile (*PRIVATE Repository*) and invite following users to the repo.
 
 * link:https://github.com/borisstock[borisstock]
 * link:https://github.com/ehinterberger[ehinterberger]
 * link:https://github.com/peterstaub81[peterstaub81]
-* link:https://github.com/StarHack[StarHack]
 * link:https://github.com/minderjan[minderjan]
-
 
 == Functional Requirements
 
