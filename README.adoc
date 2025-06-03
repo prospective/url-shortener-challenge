@@ -27,9 +27,12 @@ Please develop an application which fulfills the requirements described below. P
 
 == Functional Requirements
 
-* [ ] An application which exposes one endpoint (MUST be a REST endpoint) to shorten a url. The backend responds with a shortened url.
-* [ ] If the shortened URL will be called, the application performs a redirect to the registered URL.
-* [ ] The registered URL SHOULD be persisted to survive application restarts.
+* [ ] An application which exposes one endpoint (MUST be a REST endpoint) to shorten a url. The backend responds with a shortened URL.
+* [ ] If the shortened URL will be called by a caller, the application performs a redirect to the registered URL.
+* [ ] The registered URL MUST be persisted to survive application restarts.
+* [ ] Each click event on the shortened URL MUST be counted and stored with the fields (`timestamp`, `IP`, `user agent`, `referrer`). Ideally an aspect (AOP) will be used to instrument the endpoint to count the clicks.
+* [ ] The application MUST provide an endpoint to retrieve the click events for a given shortened URL. The response MUST contain aggregated values (e.g. per `hour` or `day`) and SHOULD not contain the plain click events.
+* [ ] The application SHOULD NOT provide a user interface (UI). Only a REST API is required.
 
 == Non-Functional Requirements
 
@@ -37,11 +40,11 @@ Please develop an application which fulfills the requirements described below. P
 * [ ] MUST use a build tool. _Use a tool, you're familiar with._
 * [ ] Required services MUST be containerized. MAY be a docker container.
 * [ ] The application itself MUST be containerized. MAY be a docker container.
-* [ ] The project MAY be able to start (not built) with only one command.
-* [ ] The business layer MUST contain minimum ONE meaningful test (the covereage is not essential)
-* [ ] Postgres MAY be used as persistent storage layer.
+* [ ] The project SHOULD be able to start with only one command (regardless of the dev setup).
+* [ ] The business layer MUST contain minimum ONE meaningful test (the coverage is not essential).
+* [ ] A relational database MAY be used to persist the data.
 
-== Bonus
+== Bonus (Optional)
 
 * [ ] A client MAY provide a TTL Information for a new URL shorten request.
 * [ ] If the TTL for a given URL is reached, the URL will be removed from the persistent storage.
